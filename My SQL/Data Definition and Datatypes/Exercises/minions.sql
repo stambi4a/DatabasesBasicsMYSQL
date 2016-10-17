@@ -1,0 +1,113 @@
+-- CREATE DATABASE minions
+-- CREATE TABLE minions(
+-- id INT NOT NULL,
+-- name VARCHAR(50),
+-- age INT,
+-- PRIMARY KEY (id)
+-- );
+-- --
+-- CREATE TABLE towns(
+-- id INT NOT NULL,
+-- name VARCHAR(50),
+-- PRIMARY KEY (id)
+-- );
+-- 
+-- ALTER TABLE minions.minions
+-- ADD COLUMN town_id INT;
+-- --
+-- ALTER TABLE minions
+-- ADD FOREIGN KEY (town_id)
+-- REFERENCES towns(id);
+-- 
+-- INSERT INTO towns
+-- VALUES(1, 'Sofia');
+-- INSERT INTO towns
+-- VALUES(2, 'Plovdiv');
+-- INSERT INTO towns
+-- VALUES(3, 'Varna');
+-- 
+-- Problem 04.Insert Records in Both Tables
+-- INSERT INTO minions
+-- VALUES(1, 'Kevin', 22, 1);
+-- INSERT INTO minions
+-- VALUES(2, 'Bob', 15, 3);
+-- INSERT INTO minions
+-- VALUES(3,'Steward', NULL, 2);
+
+-- Problem 05. Truncate Table Minions
+-- TRUNCATE TABLE minions;
+-- ALTER TABLE minions
+-- DROP FOREIGN KEY minions_ibfk_1;
+-- TRUNCATE TABLE towns;
+
+-- Problem 06. Drop all tables
+-- DROP TABLE minions;
+-- DROP Table towns;
+
+-- Problem 07. Create table People
+-- CREATE TABLE people(
+-- id INT PRIMARY KEY AUTO_INCREMENT NOT NULL ,
+-- name VARCHAR(200) NOT NULL,
+-- picture MEDIUMBLOB,
+-- height FLOAT,
+-- weight FLOAT,
+-- gender ENUM('m', 'f') NOT NULL,
+-- birthdate DATE NOT NULL,
+-- biography LONGTEXT
+-- );
+-- 
+-- INSERT INTO people
+-- VALUES(1, 'Stancho', NULL, 180, 80, 'm', '1980-10-03', 'Stancho biography');
+-- INSERT INTO people
+-- VALUES(2, 'Moni', NULL, 170, 50, 'f', '1987-11-05', 'Moni biography');
+-- INSERT INTO people
+-- VALUES(3, 'Milena', NULL, 160, 58, 'f', '1980-11-05', 'Milena biography');
+-- INSERT INTO people
+-- VALUES(4, 'Lili', NULL, 162, 52, 'f', '1989-06-24', 'Lili biography');
+-- INSERT INTO people
+-- VALUES(5, 'Dani', NULL, 166, 59, 'f', '1990-05-02', 'Dani biography');
+
+-- Problem 08.Create table users
+-- CREATE TABLE users(
+-- id BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL ,
+-- username VARCHAR(30) NOT NULL,
+-- password VARCHAR(22),
+-- profile_picture MEDIUMBLOB,
+-- last_login_time DATETIME,
+-- is_deleted ENUM('true', 'false')
+-- );
+
+-- INSERT INTO users
+-- VALUES(1, 'sasho123', 'ad897ah', NULL, '2016-09-29 08:08:08', 'true');
+-- INSERT INTO users
+-- VALUES(2, 'moni23p', 'ad76asf7', NULL, '2016-09-29 09:0:07', 'true');
+-- INSERT INTO users
+-- VALUES(3, 'harko', 'sfa6s7f', NULL, '2016-09-29 11:10:12', 'true');
+-- INSERT INTO users
+-- VALUES(4, 'mon4o', 'afaslkfK', NULL, '2016-09-29 15:19:10', 'true');
+-- INSERT INTO users
+-- VALUES(5, 'riko', 'as98asdf', NULL, '2016-09-29 16:38:08', 'true');
+
+-- Problem 09.Change Primary Key
+-- ALTER TABLE users
+-- CHANGE id id BIGINT NOT NULL;
+-- 
+-- ALTER TABLE users
+-- DROP PRIMARY KEY;
+-- Problem 10. Set Default Value of a field
+-- 
+-- ALTER TABLE users
+-- ADD PRIMARY KEY(id, username);
+-- ALTER TABLE users
+-- CHANGE COLUMN last_login_time last_login_time DATETIME NOT NULL DEFAULT NOW();
+
+-- Problem 11. Set Unique Field
+-- ALTER TABLE users
+-- DROP PRIMARY KEY;
+
+-- ALTER TABLE users
+-- ADD PRIMARY KEY (id);
+
+-- ALTER TABLE users
+-- ADD UNIQUE(username);
+

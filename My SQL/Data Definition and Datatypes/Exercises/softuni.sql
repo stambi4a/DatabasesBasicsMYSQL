@@ -1,0 +1,108 @@
+-- CREATE DATABASE softuni
+-- CREATE TABLE towns(
+-- id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+-- name VARCHAR(50)
+-- );
+-- --
+-- CREATE TABLE addresses(
+-- id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+-- address_text VARCHAR(50),
+-- town_id INT
+-- );
+-- --
+-- CREATE TABLE departments(
+-- id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+-- name VARCHAR(50)
+-- );
+-- --
+-- CREATE TABLE employees(
+-- id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+-- first_name VARCHAR(50),
+-- middle_name VARCHAR(50),
+-- last_name VARCHAR(50),
+-- job_title VARCHAR(50),
+-- department_id INT,
+-- hire_date DATE,
+-- salary DECIMAL
+-- );
+-- --
+-- ALTER TABLE addresses
+-- ADD FOREIGN KEY(town_id)
+-- REFERENCES towns(id);
+-- 
+-- ALTER TABLE
+-- ADD FOREIGN KEY(department_id)
+-- REFERENCES departments(id);
+
+-- Problem 16. Backup database
+
+-- INSERT INTO towns
+-- VALUES(1, 'Sofia');
+-- INSERT INTO towns
+-- VALUES(2, 'Plovdiv');
+-- INSERT INTO towns
+-- VALUES(3, 'Varna');
+-- INSERT INTO towns
+-- VALUES(4, 'Burgas');
+
+-- INSERT INTO departments
+-- VALUES(1, 'Engineering');
+-- INSERT INTO departments
+-- VALUES(2, 'Sales');
+-- INSERT INTO departments
+-- VALUES(3, 'Marketing');
+-- INSERT INTO departments
+-- VALUES(4, 'Software Development');
+-- INSERT INTO departments
+-- VALUES(5, 'Quality Assurance');
+-- 
+-- INSERT INTO employees
+-- VALUES(1, 'Ivan', 'Ivanov', 'Ivanov', '.NET Developer', 4, CAST('2013-02-01' AS DATE), 3500.00);
+-- INSERT INTO employees
+-- VALUES(2, 'Petar', 'Petrov', 'Petrov', 'Senior Engineer', 1, CAST('2004-03-02' AS DATE), 4000.00);
+-- INSERT INTO employees
+-- VALUES(3, 'Maria', 'Petrova', 'Ivanova', 'Intern', 5, CAST('2016-08-28' AS DATE), 525.25);
+-- INSERT INTO employees
+-- VALUES(4, 'Georgi', 'Terziev', 'Ivanov', 'CEO', 2, CAST('2007-12-09' AS DATE), 3000.00);
+-- INSERT INTO employees
+-- VALUES(5, 'Peter', 'Pan', 'Pan', 'Intern', 3, CAST('2016-08-28' AS DATE), 599.88);
+
+-- Problem 18. Basic select all fileds.
+-- SELECT * FROM towns;
+-- SELECT * FROM departments;
+-- SELECT * FROM employees;
+
+-- Problem 19. Basic Select All Fields and Order Them
+-- SELECT * FROM towns
+-- ORDER BY name ASC;
+-- 
+-- SELECT * FROM departments
+-- ORDER BY name ASC;
+-- 
+-- SELECT * FROM employees
+-- ORDER BY salary DESC;
+
+-- Problem 20. Basic select some fields
+-- SELECT name FROM towns
+-- ORDER BY name;
+-- 
+-- SELECT name FROM departments
+-- ORDER BY name;
+-- 
+-- SELECT first_name, last_name, job_title, salary FROM employees
+-- ORDER BY salary DESC;
+
+-- Problem 21. Increase salary of all emplyees
+-- UPDATE employees
+-- SET salary = salary * 1.1;
+-- 
+-- SELECT salary FROM employees;
+
+-- Problem 22. Decrease tax rate
+-- UPDATE payments
+-- SET tax_rate = tax_rate * 0.97;
+-- 
+-- SELECT tax_rate FROM payments;
+
+-- Problem 23. Delete all recordsd from occupancies.
+TRUNCATE occupancies

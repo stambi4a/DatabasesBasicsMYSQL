@@ -1,0 +1,86 @@
+-- Problem 12. Movies Database
+-- CREATE DATABASE movies
+
+-- CREATE TABLE directors(
+-- id INT PRIMARY KEY NOT NULL AUTO_INCREMENT  ,
+-- director_name VARCHAR(50),
+-- notes LONGTEXT
+-- );
+-- 
+-- CREATE TABLE genres(
+-- id INT PRIMARY KEY NOT NULL AUTO_INCREMENT ,
+-- genre_name VARCHAR(50),
+-- notes LONGTEXT
+-- );
+-- 
+-- CREATE TABLE categories(
+-- id INT PRIMARY KEY NOT NULL AUTO_INCREMENT ,
+-- category_name VARCHAR(50),
+-- notes LONGTEXT
+-- );
+-- 
+-- CREATE TABLE movies(
+-- id INT PRIMARY KEY NOT NULL AUTO_INCREMENT ,
+-- title VARCHAR(50),
+-- director_id INT NOT NULL,
+-- copyright_year DATE,
+-- length TIME,
+-- genre_id INT NOT NULL,
+-- category_id INT NOT NULL,
+-- rating FLOAT,
+-- notes LONGTEXT
+-- );
+-- 
+-- INSERT INTO directors
+-- VALUES(1, 'Steven', 'Steven Notes');
+-- INSERT INTO directors
+-- VALUES(2, 'STENLI', 'STENLI NOTES');
+-- INSERT INTO directors
+-- VALUES(3, 'JAMES', 'JAMES NOTES');
+-- INSERT INTO directors
+-- VALUES(4, 'RIDLEY', 'RIDLEY NOTES');
+-- INSERT INTO directors
+-- VALUES(5, 'Christopher', 'Christopher Notes');
+-- INSERT INTO genres
+-- VALUES(1, 'Thriller', 'Thriller notes');
+-- INSERT INTO genres
+-- VALUES(2, 'Horror', 'Horror notes');
+-- INSERT INTO genres
+-- VALUES(3, 'Comedy', 'Comedy notes');
+-- INSERT INTO genres
+-- VALUES(4, 'Action', 'Action notes');
+-- INSERT INTO genres
+-- VALUES(5, 'Sci-Fi', 'Sci-Fi notes');
+-- INSERT INTO categories
+-- VALUES(1, 'Blockbusters', 'Blockbusters notes');
+-- INSERT INTO categories
+-- VALUES(2, 'European', 'European notes');
+-- INSERT INTO categories
+-- VALUES(3, 'Independent', 'Independent notes');
+-- INSERT INTO categories
+-- VALUES(4, 'Reality', 'Reality notes');
+-- INSERT INTO categories
+-- VALUES(5, 'Documentary', 'Documentary notes');
+-- 
+-- INSERT INTO movies
+-- VALUES(1, 'The BFG', 1, '2016-07-09', '1:30:30', 3, 1, 7.6, 'The BFG notes');
+-- INSERT INTO movies
+-- VALUES(2, '2001', 2, '1970-03-19', '2:55:11', 5, 1, 8.8, '2001 notes');
+-- INSERT INTO movies
+-- VALUES(3, 'Real lies', 3, '1994-04-22', '2:30:30', 4, 1, 5.5, 'Real lies notes');
+-- INSERT INTO movies
+-- VALUES(4, 'Alien', 4, '1978-01-12', '2:12:45', 5, 1, 8.4, 'Alien notes');
+-- INSERT INTO movies
+-- VALUES(5, 'Inception', 1, '2009-07-21', '2:30:30', 5, 1, 7.8, 'Inception notes');
+-- 
+-- ALTER TABLE movies
+-- ADD CONSTRAINT fk_movies_directors FOREIGN KEY(director_id)
+-- REFERENCES directors(id);
+-- 
+-- ALTER TABLE movies
+-- ADD CONSTRAINT fk_movies_genres FOREIGN KEY (genre_id)
+-- REFERENCES genres(id);
+-- 
+-- ALTER TABLE movies
+-- ADD CONSTRAINT fk_movies_categories FOREIGN KEY (category_id)
+-- REFERENCES categories(id);

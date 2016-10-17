@@ -1,0 +1,37 @@
+-- CREATE DATABASE softuni
+-- CREATE TABLE towns(
+-- id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+-- name VARCHAR(50)
+-- );
+-- --
+-- CREATE TABLE addresses(
+-- id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+-- address_text VARCHAR(50),
+-- town_id INT
+-- );
+-- --
+-- CREATE TABLE departments(
+-- id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+-- name VARCHAR(50)
+-- );
+-- --
+-- CREATE TABLE employees(
+-- id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+-- first_name VARCHAR(50),
+-- middle_name VARCHAR(50),
+-- last_name VARCHAR(50),
+-- job_title VARCHAR(50),
+-- department_id INT,
+-- hire_date DATE,
+-- salary DECIMAL
+-- );
+-- --
+-- ALTER TABLE addresses
+-- ADD FOREIGN KEY(town_id)
+-- REFERENCES towns(id);
+-- 
+-- ALTER TABLE
+-- ADD FOREIGN KEY(department_id)
+-- REFERENCES departments(id);
+
+-- Problem 16. Backup database
